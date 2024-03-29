@@ -1,0 +1,59 @@
+
+.annuallyMonthlyToggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.75rem;
+}
+
+.pricingLabel {
+  color: var(--light-grayish-blue);
+  cursor: pointer;
+  user-select: none;
+}
+
+.toggleButtonWrapper {  
+  position: relative;
+  display: inline-block;
+  height: 2rem;
+  width: 3.75rem;
+}
+
+input[type=checkbox] {
+  width: 0;
+  height: 0;
+  opacity: 0;  
+}
+
+.toggleSlider {
+  position: absolute;    
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--primary-gradient);
+  border-radius: 1rem;
+
+  cursor: pointer;
+  transition: transform 0.4s, opacity 0.2s;
+}
+
+.toggleSlider:hover {
+  opacity: 75%;
+}
+
+.toggleSlider::before {
+  content: '';
+  position: absolute;
+  width: 1.6rem;
+  height: 1.6rem;
+  left: 0.2rem;
+  bottom: 0.2rem;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.4s, opacity 0.2s;
+}
+
+input[type=checkbox]:checked + .toggleSlider::before {
+  transform: translateX(1.75rem);
+}

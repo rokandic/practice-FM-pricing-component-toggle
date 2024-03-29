@@ -1,0 +1,5 @@
+[
+  {"id": 1,"name": "basic", "priceAnnually": 199.99, "priceMonthly": 19.99, "storage": "500 GB", "users": 2, "send": "3 GB", "highlighted": false},
+  {"id": 2,"name": "professional", "priceAnnually": 249.99, "priceMonthly": 24.99, "storage": "1 TB", "users": 5, "send": "10 GB", "highlighted": true},
+  {"id": 3,"name": "master", "priceAnnually": 399.99, "priceMonthly": 39.99, "storage": "2 TB", "users": 10, "send": "20 GB", "highlighted": false}
+]

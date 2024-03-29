@@ -1,0 +1,127 @@
+.plan {
+  --border-radius: 0.8rem;
+
+  min-width: 22rem;
+  min-height: 30.25rem;
+  padding: 2.4rem 2rem 2rem;
+
+  border-radius: var(--border-radius);
+
+  background-color: white;   
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  justify-content: space-between;
+
+  box-shadow: 0.15rem 1rem 1rem 0 var(--light-grayish-blue-shadows);
+}
+
+.plan > .planName {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  color: var(--grayish-blue);
+}
+
+.plan > h2 {
+  font-size: 4.8rem;
+  color: var(--dark-grayish-blue);
+  letter-spacing: -0.1rem;
+  
+  display: flex;
+  align-items: center;
+}
+
+.plan > h2 > span {
+  font-size: 2.6rem;  
+  margin-right: 0.35rem;
+}
+
+.plan ul {
+  width: 100%;
+}
+
+.plan li {
+  list-style: none;
+  padding: 1.1rem 0;
+  text-align: center;
+  border-top: 1px solid var(--light-grayish-blue-transparent);  
+  color: var(--grayish-blue);
+}
+
+.plan li:last-child {
+  border-bottom: 1px solid var(--light-grayish-blue-transparent);
+  margin-bottom: 1rem;
+}
+
+.plan a {
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  background: var(--primary-gradient);
+  width: 100%;
+  font-size: 0.85rem;
+  letter-spacing: 0.1rem;
+  height: 3rem;
+  line-height: 3rem;
+  border-radius: 0.4rem;
+  text-transform: uppercase;  
+  border: solid 1px var(--primary-gradient);
+}
+
+.plan a:hover {
+  background-color: white;
+  background: none;
+  color: var(--purple);
+  border: solid 1px var(--purple);
+}
+
+.highlighted {
+  background: var(--primary-gradient);    
+}
+
+.highlighted :is(.planName, .priceInfo,.planItem) {
+  color: white;
+}
+
+.highlighted .learnMore {
+  color: var(--purple);
+  background: none;
+  background-color: white;
+  border: 1px solid white;
+}
+
+.highlighted .learnMore:hover {
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+}
+
+.highlighted .planItem {
+  border-top: 1px solid rgb(255,255,255,30%);
+}
+
+.highlighted .planItem:last-child {
+  border-bottom: 1px solid rgb(255,255,255,30%);
+}
+
+@media screen and (min-width: 70rem) {
+  .plan {
+    min-width: 23.25rem;  
+    border-radius: 0;
+    }
+
+  .highlighted {
+    min-height: 33.25rem;
+    padding: 3.9rem 2rem 3.5rem;
+    border-radius: var(--border-radius);
+  }
+
+  .plan:first-child {
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+  }
+
+    .plan:last-child {
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  }
+}
